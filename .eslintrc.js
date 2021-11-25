@@ -14,5 +14,11 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'no-console': 'off',
+    indent: ['error', 2],
+    eqeqeq: 'off',
+    curly: 'warn'
+    // quotes: ['warn', 'double'],
+  }
 }
