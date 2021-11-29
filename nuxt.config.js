@@ -1,29 +1,36 @@
 export default {
-  target: 'static',
+  target: "static",
   head: {
-    title: 'francoisfontaine',
+    title: "francoisfontaine",
     htmlAttrs: {
-      lang: 'fr'
+      lang: "fr"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
     ]
   },
   css: [
-    '~assets/scss/main.scss'
+    "~assets/scss/config/default.scss"
   ],
+  styleResources: {
+    scss: [
+      "~assets/scss/config/variables.scss",
+      "~assets/scss/fonts/fonts.scss"
+    ]
+  },
   plugins: [],
   components: true,
   buildModules: [
-    '@nuxtjs/eslint-module'
+    "@nuxtjs/style-resources",
+    "@nuxtjs/eslint-module"
   ],
   modules: [
-    '@nuxtjs/axios'
+    "@nuxtjs/axios"
   ],
   axios: {},
   build: {}
