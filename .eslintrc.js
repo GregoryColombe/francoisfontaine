@@ -5,20 +5,24 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: "babel-eslint"
   },
   extends: [
-    '@nuxtjs',
-    'plugin:nuxt/recommended'
+    "@nuxtjs",
+    "plugin:nuxt/recommended"
   ],
   plugins: [
   ],
   // add your custom rules here
   rules: {
-    'no-console': 'off',
-    indent: ['error', 2],
-    eqeqeq: 'off',
-    curly: 'warn'
-    // quotes: ['warn', 'double'],
+    indent: ["error", 2],
+    quotes: ["error", "double"],
+    "no-console": ["error", { allow: ["warn", "error", "log"] }],
+    "vue/max-attributes-per-line": ["error", {
+      singleline: { max: 1 },
+      multiline: { max: 1 }
+    }],
+    "arrow-parens": ["error", "as-needed"],
+    "no-extend-native": ["error", { exceptions: ["Array", "Object"] }]
   }
 }
